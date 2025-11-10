@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: "Equipo", href: "#team" },
-    { label: "Torneos", href: "#tournaments" },
+    { label: "Competencias", href: "#tournaments" },
     { label: "Noticias", href: "#news" },
     { label: "Socios", href: "#partners" },
     { label: "Tienda", href: "#shop" },
