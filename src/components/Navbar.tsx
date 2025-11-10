@@ -20,14 +20,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <a href="/" className="flex items-center gap-3 group">
+            <a href="/" className="flex items-center gap-3">
               <img 
                 src={logo} 
                 alt="Lagartos Esports Logo" 
-                className="h-10 w-10 transition-transform group-hover:scale-110"
+                className="h-10 w-10"
               />
               <div className="flex flex-col">
-                <div className="text-xl font-bold text-primary group-hover:text-brand-glow transition-colors leading-none">
+                <div className="text-xl font-bold text-primary leading-none">
                   LAGARTOS
                 </div>
                 <div className="text-xs font-medium text-muted-foreground">ESPORTS</div>
