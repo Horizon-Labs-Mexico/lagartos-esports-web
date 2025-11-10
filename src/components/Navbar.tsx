@@ -1,18 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart } from "lucide-react";
+import { Menu, Search, ShoppingCart, Languages } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { label: "Equipo", href: "#team" },
-    { label: "Competencias", href: "#tournaments" },
-    { label: "Noticias", href: "#news" },
-    { label: "Socios", href: "#partners" },
-    { label: "Tienda", href: "#shop" },
+    { label: t("nav.team"), href: "#team" },
+    { label: t("nav.tournaments"), href: "#tournaments" },
+    { label: t("nav.news"), href: "#news" },
+    { label: t("nav.partners"), href: "#partners" },
+    { label: t("nav.shop"), href: "#shop" },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es");
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -44,6 +50,15 @@ const Navbar = () => {
 
           {/* Right Actions */}
           <div className="flex items-center gap-3">
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="text-foreground/80 hover:text-primary"
+              onClick={toggleLanguage}
+              title={language === "es" ? "Switch to English" : "Cambiar a Español"}
+            >
+              <Languages className="h-5 w-5" />
+            </Button>
             <Button variant="ghost" size="icon" className="text-foreground/80 hover:text-primary">
               <Search className="h-5 w-5" />
             </Button>
@@ -52,10 +67,10 @@ const Navbar = () => {
             </Button>
             <div className="hidden md:flex items-center gap-2">
               <Button variant="ghost" className="text-foreground/80">
-                Iniciar Sesión
+                {t("nav.login")}
               </Button>
               <Button className="bg-primary text-primary-foreground hover:bg-brand-glow">
-                Registrarse
+                {t("nav.register")}
               </Button>
             </div>
             <Button
@@ -84,10 +99,10 @@ const Navbar = () => {
               ))}
               <div className="flex flex-col gap-2 pt-3 border-t border-border">
                 <Button variant="ghost" className="w-full justify-start">
-                  Iniciar Sesión
+                  {t("nav.login")}
                 </Button>
                 <Button className="w-full bg-primary text-primary-foreground hover:bg-brand-glow">
-                  Registrarse
+                  {t("nav.register")}
                 </Button>
               </div>
             </div>

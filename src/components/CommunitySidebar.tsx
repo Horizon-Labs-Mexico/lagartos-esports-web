@@ -1,40 +1,43 @@
 import { MessageCircle, TrendingUp, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const CommunitySidebar = () => {
+  const { t } = useLanguage();
+  
   const discussions = [
     {
-      title: "Análisis del último partido vs Dragones",
+      title: t("community.discussion1"),
       replies: 24,
       trending: true,
       icon: TrendingUp,
     },
     {
-      title: "Nuevos fichajes para la próxima temporada",
+      title: t("community.discussion2"),
       replies: 15,
       trending: false,
       icon: Users,
     },
     {
-      title: "¿Cuál es la mejor estrategia en Dust2?",
+      title: t("community.discussion3"),
       replies: 42,
       trending: true,
       icon: MessageCircle,
     },
     {
-      title: "Horarios de entrenamientos abiertos",
+      title: t("community.discussion4"),
       replies: 8,
       trending: false,
       icon: Users,
     },
     {
-      title: "Merchandising oficial disponible",
+      title: t("community.discussion5"),
       replies: 31,
       trending: false,
       icon: MessageCircle,
     },
     {
-      title: "Resumen del torneo regional",
+      title: t("community.discussion6"),
       replies: 19,
       trending: true,
       icon: TrendingUp,
@@ -44,8 +47,8 @@ const CommunitySidebar = () => {
   return (
     <div className="w-full lg:w-80 space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-foreground mb-4">COMUNIDAD</h2>
-        <p className="text-sm text-muted-foreground mb-6">Últimas Discusiones</p>
+        <h2 className="text-2xl font-bold text-foreground mb-4">{t("community.title")}</h2>
+        <p className="text-sm text-muted-foreground mb-6">{t("community.subtitle")}</p>
 
         <div className="space-y-3">
           {discussions.map((discussion, index) => {
@@ -65,10 +68,10 @@ const CommunitySidebar = () => {
                     </h3>
                     <div className="flex items-center gap-2 mt-2">
                       <span className="text-xs text-muted-foreground">
-                        {discussion.replies} respuestas
+                        {discussion.replies} {t("community.replies")}
                       </span>
                       {discussion.trending && (
-                        <span className="text-xs text-primary font-medium">• Trending</span>
+                        <span className="text-xs text-primary font-medium">• {t("community.trending")}</span>
                       )}
                     </div>
                   </div>

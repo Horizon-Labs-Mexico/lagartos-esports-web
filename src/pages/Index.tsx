@@ -2,8 +2,11 @@ import Navbar from "@/components/Navbar";
 import HeroMatch from "@/components/HeroMatch";
 import CommunitySidebar from "@/components/CommunitySidebar";
 import TeamSection from "@/components/TeamSection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -30,42 +33,42 @@ const Index = () => {
         <footer className="bg-carbon py-12 border-t border-border">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-primary mb-4">LAGARTOS</h3>
-                <p className="text-sm text-muted-foreground">
-                  El mejor equipo de esports de la región.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-3">Equipo</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-primary transition-colors">Roster</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Staff</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Historia</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-3">Comunidad</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-primary transition-colors">Discord</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Twitch</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Twitter</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-foreground mb-3">Legal</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li><a href="#" className="hover:text-primary transition-colors">Privacidad</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Términos</a></li>
-                  <li><a href="#" className="hover:text-primary transition-colors">Contacto</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="mt-8 pt-8 border-t border-border text-center">
+            <div>
+              <h3 className="text-xl font-bold text-primary mb-4">LAGARTOS</h3>
               <p className="text-sm text-muted-foreground">
-                © 2025 Lagartos Esports. Todos los derechos reservados.
+                {t("footer.description")}
               </p>
             </div>
+            <div>
+              <h4 className="font-semibold text-foreground mb-3">{t("footer.team")}</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.roster")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.staff")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.history")}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground mb-3">{t("footer.community")}</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.discord")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.twitch")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.twitter")}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground mb-3">{t("footer.legal")}</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.privacy")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.terms")}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t("footer.contact")}</a></li>
+              </ul>
+            </div>
+            </div>
+          <div className="mt-8 pt-8 border-t border-border text-center">
+            <p className="text-sm text-muted-foreground">
+              {t("footer.rights")}
+            </p>
+          </div>
           </div>
         </footer>
       </div>

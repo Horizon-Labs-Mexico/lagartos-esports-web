@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-bg.jpg";
 
 const HeroMatch = () => {
+  const { t } = useLanguage();
   const [time, setTime] = useState({
     days: 13,
     hours: 15,
@@ -47,17 +49,17 @@ const HeroMatch = () => {
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 mb-6">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-foreground">Próximo Torneo</span>
+            <span className="text-sm font-medium text-foreground">{t("hero.upcoming")}</span>
           </div>
 
           <h2 className="text-sm font-medium text-muted-foreground mb-2">
-            Counter-Strike 2 Championship 2025
+            {t("hero.tournament")}
           </h2>
 
           <h1 className="text-5xl md:text-6xl font-black text-foreground mb-8 leading-tight">
             LAGARTOS
             <br />
-            <span className="text-primary">VS</span>
+            <span className="text-primary">{t("hero.vs")}</span>
             <br />
             DRAGONES
           </h1>
@@ -65,10 +67,10 @@ const HeroMatch = () => {
           {/* Countdown Timer */}
           <div className="flex gap-4 mb-8">
             {[
-              { value: time.days, label: "días" },
-              { value: time.hours, label: "horas" },
-              { value: time.minutes, label: "mins" },
-              { value: time.seconds, label: "segs" },
+              { value: time.days, label: t("hero.days") },
+              { value: time.hours, label: t("hero.hours") },
+              { value: time.minutes, label: t("hero.mins") },
+              { value: time.seconds, label: t("hero.secs") },
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 <div className="bg-card/80 backdrop-blur-sm border border-primary/30 rounded-lg w-20 h-20 flex items-center justify-center">
@@ -83,10 +85,10 @@ const HeroMatch = () => {
 
           <div className="flex flex-wrap gap-4">
             <Button className="bg-primary text-primary-foreground hover:bg-brand-glow font-semibold">
-              Ver Stream en Vivo
+              {t("hero.watchLive")}
             </Button>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Información del Torneo
+              {t("hero.tournamentInfo")}
             </Button>
           </div>
         </div>

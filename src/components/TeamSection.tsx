@@ -1,12 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import teamPhoto from "@/assets/team-photo.jpg";
 
 const TeamSection = () => {
+  const { t } = useLanguage();
+  
   const achievements = [
-    { title: "Campeones Regionales", year: "2024" },
-    { title: "Finalistas Nacionales", year: "2024" },
-    { title: "MVP del Torneo", year: "2023" },
+    { title: t("team.achievement1"), year: "2024" },
+    { title: t("team.achievement2"), year: "2024" },
+    { title: t("team.achievement3"), year: "2023" },
   ];
 
   return (
@@ -15,23 +18,21 @@ const TeamSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/30 mb-6">
-              <span className="text-sm font-medium text-primary">NUESTRO EQUIPO</span>
+              <span className="text-sm font-medium text-primary">{t("team.badge")}</span>
             </div>
             
             <h2 className="text-4xl md:text-5xl font-black text-foreground mb-6">
-              CONOCE A LOS
+              {t("team.title")}
               <br />
-              <span className="text-primary">LAGARTOS</span>
+              <span className="text-primary">{t("team.subtitle")}</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8">
-              Un equipo de élite formado por los mejores jugadores de la región. Con años de
-              experiencia competitiva y una pasión inquebrantable por el juego, estamos listos
-              para conquistar cualquier torneo.
+              {t("team.description")}
             </p>
 
             <div className="space-y-4 mb-8">
-              <h3 className="text-xl font-bold text-foreground">Logros Recientes</h3>
+              <h3 className="text-xl font-bold text-foreground">{t("team.achievements")}</h3>
               <div className="space-y-3">
                 {achievements.map((achievement, index) => (
                   <Card
@@ -48,7 +49,7 @@ const TeamSection = () => {
             </div>
 
             <Button className="bg-primary text-primary-foreground hover:bg-brand-glow font-semibold">
-              Ver Roster Completo
+              {t("team.viewRoster")}
             </Button>
           </div>
 
