@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Search, ShoppingCart } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,11 +20,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-8">
-            <a href="/" className="flex items-center gap-2 group">
-              <div className="text-2xl font-bold text-primary group-hover:text-brand-glow transition-colors">
-                LAGARTOS
+            <a href="/" className="flex items-center gap-3 group">
+              <img 
+                src={logo} 
+                alt="Lagartos Esports Logo" 
+                className="h-10 w-10 transition-transform group-hover:scale-110"
+              />
+              <div className="flex flex-col">
+                <div className="text-xl font-bold text-primary group-hover:text-brand-glow transition-colors leading-none">
+                  LAGARTOS
+                </div>
+                <div className="text-xs font-medium text-muted-foreground">ESPORTS</div>
               </div>
-              <div className="text-sm font-medium text-muted-foreground">ESPORTS</div>
             </a>
 
             {/* Desktop Navigation */}
