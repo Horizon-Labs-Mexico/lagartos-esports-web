@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroMatch from "@/components/HeroMatch";
 import CommunitySidebar from "@/components/CommunitySidebar";
+import NavigationCards from "@/components/NavigationCards";
 import TeamSection from "@/components/TeamSection";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -26,6 +27,8 @@ const Index = () => {
             </aside>
           </div>
         </div>
+
+        <NavigationCards />
 
         <TeamSection />
 

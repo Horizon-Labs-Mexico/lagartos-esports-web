@@ -96,6 +96,12 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.terms": "Términos",
     "footer.contact": "Contacto",
     "footer.rights": "© 2025 Lagartos Esports. Todos los derechos reservados.",
+    
+    // Navigation Cards
+    "nav.tournamentsDesc": "Explora nuestras competiciones y logros",
+    "nav.newsDesc": "Últimas actualizaciones y anuncios del equipo",
+    "nav.playersDesc": "Conoce a nuestro roster profesional",
+    "nav.eventsDesc": "Próximos eventos y transmisiones",
   },
   en: {
     // Navbar
@@ -156,5 +162,11 @@ const translations: Record<Language, Record<string, string>> = {
     "footer.terms": "Terms",
     "footer.contact": "Contact",
     "footer.rights": "© 2025 Lagartos Esports. All rights reserved.",
+    
+    // Navigation Cards
+    "nav.tournamentsDesc": "Explore our competitions and achievements",
+    "nav.newsDesc": "Latest team updates and announcements",
+    "nav.playersDesc": "Meet our professional roster",
+    "nav.eventsDesc": "Upcoming events and streams",
   },
 };
