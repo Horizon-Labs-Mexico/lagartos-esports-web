@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-bg.jpg";
-import gamesLogo from "@/assets/games-of-future-logo.png";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
@@ -57,13 +56,13 @@ const HeroMatch = () => {
             {t("hero.tournament")}
           </h2>
 
-          <div className="mb-8">
-            <img 
-              src={gamesLogo} 
-              alt="Games of the Future" 
-              className="w-full max-w-md h-auto"
-            />
-          </div>
+          <h1 className="text-5xl md:text-6xl font-black text-foreground mb-8 leading-tight">
+            LAGARTOS
+            <br />
+            <span className="text-primary">{t("hero.vs")}</span>
+            <br />
+            DRAGONES
+          </h1>
 
           {/* Countdown Timer */}
           <div className="flex gap-4 mb-8">
