@@ -13,40 +13,43 @@ const XboxGamePass = () => {
       
       <div className="pt-16">
         <div className="container mx-auto px-4 py-12">
-          {/* Header Section */}
-          <div className="mb-6">
-            <div className="flex items-center gap-6 mb-3">
-              <img 
-                src={afterlifeLogo} 
-                alt="Afterlife" 
-                className="h-12 md:h-16"
-              />
-            </div>
-            <h1 className="text-2xl md:text-4xl font-bold text-foreground font-orbitron mb-2">
-              {t("xbox.title")}
-            </h1>
-          </div>
+          {/* Main Grid */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Left Column */}
+            <div>
+              {/* Header Section */}
+              <div className="mb-6">
+                <div className="flex items-center gap-6 mb-3">
+                  <img 
+                    src={afterlifeLogo} 
+                    alt="Afterlife" 
+                    className="h-12 md:h-16"
+                  />
+                </div>
+                <h1 className="text-2xl md:text-4xl font-bold text-foreground font-orbitron mb-2">
+                  {t("xbox.title")}
+                </h1>
+              </div>
 
-          {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
-            {/* Left Content */}
-            <div className="space-y-4">
-              <div className="h-1 w-16 bg-primary"></div>
-              
-              <p className="text-base text-muted-foreground leading-relaxed">
-                {t("xbox.description")}
-              </p>
+              {/* Left Content */}
+              <div className="space-y-4">
+                <div className="h-1 w-16 bg-primary"></div>
+                
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  {t("xbox.description")}
+                </p>
 
-              <Button 
-                size="default"
-                className="bg-background text-foreground border-2 border-foreground hover:bg-foreground hover:text-background font-bold px-6"
-              >
-                {t("xbox.joinButton")}
-              </Button>
+                <Button 
+                  size="default"
+                  className="bg-background text-foreground border-2 border-foreground hover:bg-foreground hover:text-background font-bold px-6"
+                >
+                  {t("xbox.joinButton")}
+                </Button>
 
-              <p className="text-xs text-muted-foreground italic">
-                {t("xbox.disclaimer")}
-              </p>
+                <p className="text-xs text-muted-foreground italic">
+                  {t("xbox.disclaimer")}
+                </p>
+              </div>
             </div>
 
             {/* Right Image */}
