@@ -14,17 +14,17 @@ const XboxGamePass = () => {
       <div className="pt-16">
         <div className="container mx-auto px-4 py-12">
           {/* Header Section */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-8">
+          <div className="mb-8">
+            <div className="flex items-center gap-8 mb-6">
               <img 
                 src={afterlifeLogo} 
                 alt="Afterlife" 
                 className="h-16 md:h-20"
               />
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground font-orbitron">
-                {t("xbox.title")}
-              </h1>
             </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground font-orbitron mb-2">
+              {t("xbox.title")}
+            </h1>
           </div>
 
           {/* Content Grid */}
