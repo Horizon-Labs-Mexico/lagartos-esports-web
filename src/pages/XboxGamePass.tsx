@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import xboxHero from "@/assets/xbox-gamepass-hero.png";
+import afterlifeLogo from "@/assets/afterlife-logo.png";
 
 const XboxGamePass = () => {
   const { t } = useLanguage();
@@ -15,7 +16,12 @@ const XboxGamePass = () => {
           {/* Header Section */}
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-8">
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground">
+              <img 
+                src={afterlifeLogo} 
+                alt="Afterlife" 
+                className="h-16 md:h-20"
+              />
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground font-orbitron">
                 {t("xbox.title")}
               </h1>
             </div>
@@ -55,7 +61,7 @@ const XboxGamePass = () => {
 
           {/* Bottom CTA Section */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground font-orbitron mb-4">
               {t("xbox.ctaText")}{" "}
               <span className="text-primary">{t("xbox.ctaHighlight")}</span>
             </h2>
