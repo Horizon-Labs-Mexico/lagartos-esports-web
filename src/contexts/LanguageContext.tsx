@@ -102,6 +102,14 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.newsDesc": "Últimas actualizaciones y anuncios del equipo",
     "nav.playersDesc": "Conoce a nuestro roster profesional",
     "nav.eventsDesc": "Próximos eventos y transmisiones",
+    
+    // Xbox Game Pass Page
+    "xbox.title": "XBOX GAME PASS",
+    "xbox.description": "Cada vez que visitas el Afterlife y eliges uno de nuestros títulos, no solo estás obteniendo una experiencia y entretenimiento de alta calidad, sino que también estás construyendo algo extraordinario junto a nosotros. Es por eso que ahora tu tiempo de juego desbloquea privilegios exclusivos de la mano de Xbox que te permitirán disfrutar aún más de tu experiencia.",
+    "xbox.joinButton": "ÚNETE AHORA",
+    "xbox.disclaimer": "Este beneficio solo está disponible para clientes registrados y que cuentan con su EsportsID. Consulta los preguntas frecuentes.",
+    "xbox.ctaText": "ACUMULA HORAS Y LLÉVATE UN",
+    "xbox.ctaHighlight": "GAME PASS ULTIMATE",
   },
   en: {
     // Navbar
@@ -168,5 +176,13 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.newsDesc": "Latest team updates and announcements",
     "nav.playersDesc": "Meet our professional roster",
     "nav.eventsDesc": "Upcoming events and streams",
+    
+    // Xbox Game Pass Page
+    "xbox.title": "XBOX GAME PASS",
+    "xbox.description": "Every time you visit Afterlife and choose one of our titles, you're not only getting high-quality entertainment and experience, but you're also building something extraordinary with us. That's why now your playtime unlocks exclusive Xbox privileges that will allow you to enjoy your experience even more.",
+    "xbox.joinButton": "JOIN NOW",
+    "xbox.disclaimer": "This benefit is only available for registered customers with their EsportsID. Check the frequently asked questions.",
+    "xbox.ctaText": "ACCUMULATE HOURS AND GET A",
+    "xbox.ctaHighlight": "GAME PASS ULTIMATE",
   },
 };

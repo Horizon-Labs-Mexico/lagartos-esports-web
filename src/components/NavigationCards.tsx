@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Newspaper, Users, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import sponsorBanner from "@/assets/sponsor-banner.png";
 
 const NavigationCards = () => {
@@ -37,11 +38,13 @@ const NavigationCards = () => {
     <div className="container mx-auto px-4 py-12">
       {/* Sponsor Banner */}
       <div className="mb-12">
-        <img 
-          src={sponsorBanner} 
-          alt="Sponsors" 
-          className="w-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-        />
+        <Link to="/xbox-game-pass">
+          <img 
+            src={sponsorBanner} 
+            alt="Sponsors" 
+            className="w-full rounded-lg shadow-lg cursor-pointer"
+          />
+        </Link>
       </div>
 
       {/* Navigation Cards */}
