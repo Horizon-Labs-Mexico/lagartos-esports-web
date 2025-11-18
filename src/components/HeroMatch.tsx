@@ -61,7 +61,7 @@ const HeroMatch = () => {
             <img 
               src={gotfImage} 
               alt="Games of The Future Mexico 2026" 
-              className="w-full max-w-2xl h-auto"
+              className="w-full max-w-md h-auto"
             />
           </div>
 
