@@ -49,7 +49,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero Match
     "hero.upcoming": "Próximo Torneo",
-    "hero.tournament": "Counter-Strike 2 Championship 2025",
+    "hero.tournament": "Games of The Future Mexico 2026",
     "hero.vs": "VS",
     "hero.days": "días",
     "hero.hours": "horas",
@@ -123,7 +123,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Hero Match
     "hero.upcoming": "Upcoming Tournament",
-    "hero.tournament": "Counter-Strike 2 Championship 2025",
+    "hero.tournament": "Games of The Future Mexico 2026",
     "hero.vs": "VS",
     "hero.days": "days",
     "hero.hours": "hours",
