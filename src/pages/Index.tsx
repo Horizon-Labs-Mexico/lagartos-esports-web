@@ -115,7 +115,7 @@ const Index = () => {
             {/* Bottom Section - Copyright */}
             <div className="flex justify-end">
               <p className="text-sm text-foreground">
-                © 2004 - 2025. Fnatic Ltd. All rights reserved
+                © 2020 - 2025. LAGARTOS All rights reserved
               </p>
             </div>
           </div>
