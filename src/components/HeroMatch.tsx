@@ -6,27 +6,29 @@ import gotfImage from "@/assets/gotf-mexico-2026.png";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
-  const [time, setTime] = useState({
-    days: 13,
-    hours: 15,
-    minutes: 2,
-    seconds: 45,
-  });
+  const targetDate = new Date('2026-01-23T00:00:00');
+  
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
+    
+    if (difference <= 0) {
+      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+    }
+    
+    return {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  };
+
+  const [time, setTime] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
+      setTime(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
