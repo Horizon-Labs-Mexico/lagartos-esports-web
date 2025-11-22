@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, Languages } from "lucide-react";
+import { Menu, Search, ShoppingCart, Languages, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -9,11 +15,16 @@ const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { label: t("nav.team"), href: "#team" },
-    { label: t("nav.tournaments"), href: "#tournaments" },
-    { label: t("nav.news"), href: "#news" },
-    { label: t("nav.partners"), href: "#partners" },
-    { label: t("nav.shop"), href: "#shop" },
+    { label: "Equipos", href: "#equipos" },
+    { label: "Afterlife", href: "#afterlife" },
+    { label: "Competencias", href: "#competencias" },
+    { label: "Tienda", href: "#tienda" },
+  ];
+
+  const companyLinks = [
+    { label: "Founders Team", href: "#founders" },
+    { label: "Patrocinadores", href: "#patrocinadores" },
+    { label: "Gaming Experience", href: "#gaming-experience" },
   ];
 
   const toggleLanguage = () => {
@@ -36,6 +47,21 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+                  Compañía
+                  <ChevronDown className="h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background border-border">
+                  {companyLinks.map((link) => (
+                    <DropdownMenuItem key={link.label} asChild>
+                      <a href={link.href} className="cursor-pointer">
+                        {link.label}
+                      </a>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
               {navLinks.map((link) => (
                 <a
                   key={link.label}
@@ -88,6 +114,18 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
+                <div className="text-sm font-semibold text-foreground/60 px-2">Compañía</div>
+                {companyLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors py-2 pl-4"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
               {navLinks.map((link) => (
                 <a
                   key={link.label}
