@@ -3,6 +3,7 @@ import HeroMatch from "@/components/HeroMatch";
 import CommunitySidebar from "@/components/CommunitySidebar";
 import NavigationCards from "@/components/NavigationCards";
 import TeamSection from "@/components/TeamSection";
+import JerseyShowcase from "@/components/JerseyShowcase";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
@@ -27,6 +28,8 @@ const Index = () => {
             </aside>
           </div>
         </div>
+
+        <JerseyShowcase />
 
         <NavigationCards />
 
