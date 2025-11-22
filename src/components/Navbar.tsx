@@ -15,16 +15,16 @@ const Navbar = () => {
   const { language, setLanguage, t } = useLanguage();
 
   const navLinks = [
-    { label: "Equipos", href: "#equipos" },
-    { label: "Afterlife", href: "#afterlife" },
-    { label: "Competencias", href: "#competencias" },
-    { label: "Tienda", href: "#tienda" },
+    { label: t("nav.teams"), href: "#equipos" },
+    { label: t("nav.afterlife"), href: "#afterlife" },
+    { label: t("nav.competitions"), href: "#competencias" },
+    { label: t("nav.store"), href: "#tienda" },
   ];
 
   const companyLinks = [
-    { label: "Founders Team", href: "#founders" },
-    { label: "Patrocinadores", href: "#patrocinadores" },
-    { label: "Gaming Experience", href: "#gaming-experience" },
+    { label: t("nav.founders"), href: "#founders" },
+    { label: t("nav.sponsors"), href: "#patrocinadores" },
+    { label: t("nav.gaming"), href: "#gaming-experience" },
   ];
 
   const toggleLanguage = () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-6">
               <DropdownMenu>
                 <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-                  Compañía
+                  {t("nav.company")}
                   <ChevronDown className="h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border-border">
@@ -115,7 +115,7 @@ const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-3">
               <div className="flex flex-col gap-2">
-                <div className="text-sm font-semibold text-foreground/60 px-2">Compañía</div>
+                <div className="text-sm font-semibold text-foreground/60 px-2">{t("nav.company")}</div>
                 {companyLinks.map((link) => (
                   <a
                     key={link.label}

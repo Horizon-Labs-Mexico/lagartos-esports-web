@@ -39,6 +39,14 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 const translations: Record<Language, Record<string, string>> = {
   es: {
     // Navbar
+    "nav.company": "Compañía",
+    "nav.founders": "Founders Team",
+    "nav.sponsors": "Patrocinadores",
+    "nav.gaming": "Gaming Experience",
+    "nav.teams": "Equipos",
+    "nav.afterlife": "Afterlife",
+    "nav.competitions": "Competencias",
+    "nav.store": "Tienda",
     "nav.team": "Equipo",
     "nav.tournaments": "Competencias",
     "nav.news": "Noticias",
@@ -113,6 +121,14 @@ const translations: Record<Language, Record<string, string>> = {
   },
   en: {
     // Navbar
+    "nav.company": "Company",
+    "nav.founders": "Founders Team",
+    "nav.sponsors": "Sponsors",
+    "nav.gaming": "Gaming Experience",
+    "nav.teams": "Teams",
+    "nav.afterlife": "Afterlife",
+    "nav.competitions": "Competitions",
+    "nav.store": "Store",
     "nav.team": "Team",
     "nav.tournaments": "Tournaments",
     "nav.news": "News",
