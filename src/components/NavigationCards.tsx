@@ -23,14 +23,14 @@ const NavigationCards = () => {
           <img 
             src={jerseyImage} 
             alt="Jersey Official 2026" 
-            className="w-full h-auto object-contain rounded-lg"
+            className="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
           />
         </div>
         <div>
           <img 
             src={playerPhoto} 
             alt="Jugador Lagartos" 
-            className="w-full h-auto object-contain rounded-lg"
+            className="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
           />
         </div>
       </div>
