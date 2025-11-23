@@ -48,7 +48,7 @@ const HeroMatch = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
+      <div className="relative container mx-auto px-6 md:px-8 h-full flex flex-col justify-center">
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 mb-6">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
