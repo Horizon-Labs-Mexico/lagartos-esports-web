@@ -18,9 +18,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-8 py-8">
             {/* Main Content */}
-            <div className="flex-1 space-y-8">
+            <div className="flex-1">
               <HeroMatch />
-              <JerseyShowcase />
             </div>
             
             {/* Sidebar */}
@@ -29,6 +28,8 @@ const Index = () => {
             </aside>
           </div>
         </div>
+
+        <JerseyShowcase />
 
         <NavigationCards />
 
