@@ -29,9 +29,9 @@ const Index = () => {
           </div>
         </div>
 
-        <JerseyShowcase />
-
         <NavigationCards />
+
+        <JerseyShowcase />
 
         <TeamSection />
 
