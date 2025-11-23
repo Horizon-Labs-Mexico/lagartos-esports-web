@@ -15,7 +15,7 @@ const Index = () => {
       
       {/* Main Content with Sidebar */}
       <div className="pt-16">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="flex flex-col lg:flex-row gap-8 py-8">
             {/* Main Content */}
             <div className="flex-1">

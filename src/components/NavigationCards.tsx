@@ -5,7 +5,7 @@ import playerPhoto from "@/assets/player-photo.png";
 
 const NavigationCards = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-6 md:px-8 py-12">
       {/* Sponsor Banner */}
       <div className="mb-12">
         <Link to="/xbox-game-pass">
