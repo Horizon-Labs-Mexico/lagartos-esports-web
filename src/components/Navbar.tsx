@@ -1,18 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Search, ShoppingCart, Languages, ChevronDown } from "lucide-react";
+import { Menu, Search, ShoppingCart, Languages, ChevronDown, LogOut, User } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const { user, signOut } = useAuth();
+  const navigate = useNavigate();
 
   const navLinks = [
     { label: t("nav.teams"), href: "#equipos" },
@@ -29,6 +34,11 @@ const Navbar = () => {
 
   const toggleLanguage = () => {
     setLanguage(language === "es" ? "en" : "es");
+  };
+
+  const handleLogout = async () => {
+    await signOut();
+    navigate("/");
   };
 
   return (
@@ -91,13 +101,44 @@ const Navbar = () => {
             <Button variant="ghost" size="icon" className="text-foreground/80 hover:text-primary">
               <ShoppingCart className="h-5 w-5" />
             </Button>
+            
             <div className="hidden md:flex items-center gap-2">
-              <Button variant="ghost" className="text-foreground/80">
-                {t("nav.login")}
-              </Button>
-              <Button className="bg-primary text-primary-foreground hover:bg-brand-glow">
-                {t("nav.register")}
-              </Button>
+              {user ? (
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" className="text-foreground/80 flex items-center gap-2">
+                      <User className="h-4 w-4" />
+                      {user.email?.split('@')[0]}
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-background border-border">
+                    <DropdownMenuItem className="text-muted-foreground">
+                      {user.email}
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={handleLogout} className="text-destructive cursor-pointer">
+                      <LogOut className="h-4 w-4 mr-2" />
+                      {t("nav.logout")}
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <>
+                  <Button 
+                    variant="ghost" 
+                    className="text-foreground/80"
+                    onClick={() => navigate("/auth")}
+                  >
+                    {t("nav.login")}
+                  </Button>
+                  <Button 
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
+                    onClick={() => navigate("/auth")}
+                  >
+                    {t("nav.register")}
+                  </Button>
+                </>
+              )}
             </div>
             <Button
               variant="ghost"
@@ -136,12 +177,35 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 pt-3 border-t border-border">
-                <Button variant="ghost" className="w-full justify-start">
-                  {t("nav.login")}
-                </Button>
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-brand-glow">
-                  {t("nav.register")}
-                </Button>
+                {user ? (
+                  <>
+                    <div className="text-sm text-muted-foreground px-2">{user.email}</div>
+                    <Button 
+                      variant="ghost" 
+                      className="w-full justify-start text-destructive"
+                      onClick={handleLogout}
+                    >
+                      <LogOut className="h-4 w-4 mr-2" />
+                      {t("nav.logout")}
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button 
+                      variant="ghost" 
+                      className="w-full justify-start"
+                      onClick={() => navigate("/auth")}
+                    >
+                      {t("nav.login")}
+                    </Button>
+                    <Button 
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() => navigate("/auth")}
+                    >
+                      {t("nav.register")}
+                    </Button>
+                  </>
+                )}
               </div>
             </div>
           </div>
