@@ -45,42 +45,40 @@ const CommunitySidebar = () => {
   ];
 
   return (
-    <div className="w-full lg:w-80 space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-foreground mb-4">{t("community.title")}</h2>
-        <p className="text-sm text-muted-foreground mb-6">{t("community.subtitle")}</p>
+    <div className="w-full lg:w-80">
+      <Card className="bg-card/80 backdrop-blur-sm border-border p-6">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight">
+            {t("community.title")}
+          </h2>
+          <div className="w-8 h-8 flex items-center justify-center">
+            <Users className="w-6 h-6 text-primary" />
+          </div>
+        </div>
+        <p className="text-sm text-primary mb-4">{t("community.subtitle")}</p>
 
-        <div className="space-y-3">
+        <div className="space-y-1">
           {discussions.map((discussion, index) => {
             const Icon = discussion.icon;
             return (
-              <Card
+              <div
                 key={index}
-                className="p-4 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all cursor-pointer group"
+                className="flex items-center justify-between py-2 hover:bg-muted/30 px-2 -mx-2 rounded cursor-pointer transition-colors group"
               >
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                      {discussion.title}
-                    </h3>
-                    <div className="flex items-center gap-2 mt-2">
-                      <span className="text-xs text-muted-foreground">
-                        {discussion.replies} {t("community.replies")}
-                      </span>
-                      {discussion.trending && (
-                        <span className="text-xs text-primary font-medium">• {t("community.trending")}</span>
-                      )}
-                    </div>
-                  </div>
+                <span className="text-sm text-foreground group-hover:text-primary transition-colors truncate pr-4">
+                  {discussion.title}
+                </span>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <Icon className="w-4 h-4 text-muted-foreground" />
+                  <span className="text-sm text-muted-foreground min-w-[20px] text-right">
+                    {discussion.replies}
+                  </span>
                 </div>
-              </Card>
+              </div>
             );
           })}
         </div>
-      </div>
+      </Card>
     </div>
   );
 };
