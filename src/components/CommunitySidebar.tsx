@@ -47,49 +47,53 @@ const CommunitySidebar = () => {
 
   return (
     <div className="w-full lg:w-80">
-      <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
-        {/* Header image with gradient */}
-        <div className="relative h-24">
+      <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden h-[600px] flex flex-col">
+        {/* Header image with text overlay */}
+        <div className="relative h-40 flex-shrink-0">
           <img 
             src={communityHeader} 
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/60 to-card" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/40 to-card" />
+          
+          {/* Title overlay on image */}
+          <div className="absolute bottom-0 left-0 right-0 p-6">
+            <div className="flex items-center justify-between mb-1">
+              <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight drop-shadow-lg">
+                {t("community.title")}
+              </h2>
+              <div className="w-8 h-8 flex items-center justify-center">
+                <Users className="w-6 h-6 text-primary drop-shadow-lg" />
+              </div>
+            </div>
+            <p className="text-sm text-primary font-medium drop-shadow-lg">{t("community.subtitle")}</p>
+          </div>
         </div>
         
-        <div className="p-6 -mt-4 relative">
-          <div className="flex items-center justify-between mb-2">
-            <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight">
-              {t("community.title")}
-            </h2>
-            <div className="w-8 h-8 flex items-center justify-center">
-              <Users className="w-6 h-6 text-primary" />
-            </div>
-          </div>
-          <p className="text-sm text-primary mb-4">{t("community.subtitle")}</p>
-
-        <div className="space-y-1">
-          {discussions.map((discussion, index) => {
-            const Icon = discussion.icon;
-            return (
-              <div
-                key={index}
-                className="flex items-center justify-between py-2 hover:bg-muted/30 px-2 -mx-2 rounded cursor-pointer transition-colors group"
-              >
-                <span className="text-sm text-foreground group-hover:text-primary transition-colors truncate pr-4">
-                  {discussion.title}
-                </span>
-                <div className="flex items-center gap-2 flex-shrink-0">
-                  <Icon className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground min-w-[20px] text-right">
-                    {discussion.replies}
+        {/* Discussions list */}
+        <div className="p-6 flex-1 overflow-y-auto">
+          <div className="space-y-1">
+            {discussions.map((discussion, index) => {
+              const Icon = discussion.icon;
+              return (
+                <div
+                  key={index}
+                  className="flex items-center justify-between py-2 hover:bg-muted/30 px-2 -mx-2 rounded cursor-pointer transition-colors group"
+                >
+                  <span className="text-sm text-foreground group-hover:text-primary transition-colors truncate pr-4">
+                    {discussion.title}
                   </span>
+                  <div className="flex items-center gap-2 flex-shrink-0">
+                    <Icon className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground min-w-[20px] text-right">
+                      {discussion.replies}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
         </div>
       </Card>
     </div>
