@@ -26,7 +26,7 @@ const XboxGamePass = () => {
                     className="h-12 md:h-16"
                   />
                 </div>
-                <h1 className="text-2xl md:text-4xl font-bold text-foreground font-orbitron mb-2">
+                <h1 className="text-2xl md:text-4xl font-monument text-foreground mb-2 uppercase">
                   {t("xbox.title")}
                 </h1>
               </div>
@@ -64,7 +64,7 @@ const XboxGamePass = () => {
 
           {/* Bottom CTA Section */}
           <div className="mt-12 text-center">
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground font-orbitron mb-4">
+            <h2 className="text-2xl md:text-4xl font-monument text-foreground mb-4 uppercase">
               {t("xbox.ctaText")}{" "}
               <span className="text-primary">{t("xbox.ctaHighlight")}</span>
             </h2>
