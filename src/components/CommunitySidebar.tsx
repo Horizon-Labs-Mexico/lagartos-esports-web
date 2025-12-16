@@ -49,7 +49,7 @@ const CommunitySidebar = () => {
     <div className="w-full lg:w-80">
       <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden h-[600px] flex flex-col">
         {/* Header image with text overlay */}
-        <div className="relative h-40 flex-shrink-0">
+        <div className="relative h-44 flex-shrink-0">
           <img 
             src={communityHeader} 
             alt="" 
@@ -58,9 +58,9 @@ const CommunitySidebar = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/40 to-card" />
           
           {/* Title overlay on image */}
-          <div className="absolute bottom-0 left-0 right-0 p-6">
+          <div className="absolute bottom-4 left-0 right-0 px-6">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight drop-shadow-lg">
+              <h2 className="text-3xl font-monument text-foreground uppercase tracking-tight drop-shadow-lg">
                 {t("community.title")}
               </h2>
               <div className="w-8 h-8 flex items-center justify-center">

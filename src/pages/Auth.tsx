@@ -117,7 +117,7 @@ const Auth = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl font-bold text-center text-foreground mb-2">
+          <h1 className="text-2xl font-monument text-center text-foreground mb-2 uppercase">
             {isLogin ? t("auth.loginTitle") : t("auth.signupTitle")}
           </h1>
           <p className="text-muted-foreground text-center mb-6">
