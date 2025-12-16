@@ -1,6 +1,7 @@
 import { MessageCircle, TrendingUp, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
+import communityHeader from "@/assets/community-header.png";
 
 const CommunitySidebar = () => {
   const { t } = useLanguage();
@@ -46,16 +47,27 @@ const CommunitySidebar = () => {
 
   return (
     <div className="w-full lg:w-80">
-      <Card className="bg-card/80 backdrop-blur-sm border-border p-6">
-        <div className="flex items-center justify-between mb-2">
-          <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight">
-            {t("community.title")}
-          </h2>
-          <div className="w-8 h-8 flex items-center justify-center">
-            <Users className="w-6 h-6 text-primary" />
-          </div>
+      <Card className="bg-card/80 backdrop-blur-sm border-border overflow-hidden">
+        {/* Header image with gradient */}
+        <div className="relative h-24">
+          <img 
+            src={communityHeader} 
+            alt="" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/60 to-card" />
         </div>
-        <p className="text-sm text-primary mb-4">{t("community.subtitle")}</p>
+        
+        <div className="p-6 -mt-4 relative">
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-2xl font-black text-foreground uppercase italic tracking-tight">
+              {t("community.title")}
+            </h2>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <Users className="w-6 h-6 text-primary" />
+            </div>
+          </div>
+          <p className="text-sm text-primary mb-4">{t("community.subtitle")}</p>
 
         <div className="space-y-1">
           {discussions.map((discussion, index) => {
@@ -77,6 +89,7 @@ const CommunitySidebar = () => {
               </div>
             );
           })}
+        </div>
         </div>
       </Card>
     </div>
