@@ -60,7 +60,7 @@ const CommunitySidebar = () => {
           {/* Title overlay on image */}
           <div className="absolute bottom-4 left-0 right-0 px-6">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-3xl font-monument text-foreground uppercase tracking-tight drop-shadow-lg">
+              <h2 className="text-2xl font-monument text-foreground uppercase tracking-tight drop-shadow-lg">
                 {t("community.title")}
               </h2>
               <div className="w-8 h-8 flex items-center justify-center">

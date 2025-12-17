@@ -23,7 +23,7 @@ const JerseyShowcase = () => {
             <div className="w-full px-6 md:px-8 pb-8 md:pb-12">
               <div className="max-w-2xl">
                 {/* Title */}
-                <h2 className="font-monument text-4xl md:text-6xl lg:text-7xl text-foreground mb-2 uppercase tracking-wider">
+                <h2 className="font-monument text-3xl md:text-5xl lg:text-6xl text-foreground mb-2 uppercase tracking-wider">
                   Jersey Official de 2026
                 </h2>
                 
