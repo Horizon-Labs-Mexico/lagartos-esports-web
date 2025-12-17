@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         orbitron: ['Orbitron', 'sans-serif'],
         antonio: ['Antonio', 'sans-serif'],
-        monument: ['Bebas Neue', 'sans-serif'],
+        monument: ['Monument Extended', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
