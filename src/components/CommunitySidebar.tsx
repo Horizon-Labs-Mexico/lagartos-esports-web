@@ -43,6 +43,30 @@ const CommunitySidebar = () => {
       trending: true,
       icon: TrendingUp,
     },
+    {
+      title: t("community.discussion7") || "Tier list de skins",
+      replies: 27,
+      trending: false,
+      icon: MessageCircle,
+    },
+    {
+      title: t("community.discussion8") || "Highlights del mes",
+      replies: 35,
+      trending: true,
+      icon: TrendingUp,
+    },
+    {
+      title: t("community.discussion9") || "Nuevos fichajes 2025",
+      replies: 48,
+      trending: true,
+      icon: Users,
+    },
+    {
+      title: t("community.discussion10") || "Streams de práctica",
+      replies: 12,
+      trending: false,
+      icon: MessageCircle,
+    },
   ];
 
   return (
@@ -55,10 +79,10 @@ const CommunitySidebar = () => {
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/40 to-card" />
+          <div className="absolute inset-0 bg-gradient-to-b from-card/60 via-card/40 to-card" />
           
-          {/* Title overlay on image */}
-          <div className="absolute bottom-4 left-0 right-0 px-6">
+          {/* Title overlay on image - positioned at top */}
+          <div className="absolute top-4 left-0 right-0 px-6">
             <div className="flex items-center justify-between mb-1">
               <h2 className="text-2xl font-monument text-foreground uppercase tracking-wide drop-shadow-lg">
                 {t("community.title")}
