@@ -113,6 +113,10 @@ const translations: Record<Language, Record<string, string>> = {
     "community.discussion4": "Horarios de entrenamientos abiertos",
     "community.discussion5": "Merchandising oficial disponible",
     "community.discussion6": "Resumen del torneo regional",
+    "community.discussion7": "Tips para mejorar tu aim",
+    "community.discussion8": "Buscando compañeros para ranked",
+    "community.discussion9": "El nuevo parche: ¿buff o nerf?",
+    "community.discussion10": "Streaming del próximo campeonato",
     "community.replies": "respuestas",
     "community.trending": "Trending",
     
@@ -222,6 +226,10 @@ const translations: Record<Language, Record<string, string>> = {
     "community.discussion4": "Open training schedules",
     "community.discussion5": "Official merchandise available",
     "community.discussion6": "Regional tournament recap",
+    "community.discussion7": "Tips to improve your aim",
+    "community.discussion8": "Looking for ranked teammates",
+    "community.discussion9": "New patch: buff or nerf?",
+    "community.discussion10": "Upcoming championship stream",
     "community.replies": "replies",
     "community.trending": "Trending",
     
