@@ -21,7 +21,7 @@ const TeamSection = () => {
               <span className="text-sm font-medium text-primary">{t("team.badge")}</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-monument text-foreground mb-6 uppercase">
+            <h2 className="text-3xl md:text-4xl font-monument text-foreground mb-6 uppercase tracking-wide">
               {t("team.title")}
               <br />
               <span className="text-primary">{t("team.subtitle")}</span>
@@ -32,7 +32,7 @@ const TeamSection = () => {
             </p>
 
             <div className="space-y-4 mb-8">
-              <h3 className="text-lg font-monument text-foreground uppercase">{t("team.achievements")}</h3>
+              <h3 className="text-lg font-monument text-foreground uppercase tracking-wide">{t("team.achievements")}</h3>
               <div className="space-y-3">
                 {achievements.map((achievement, index) => (
                   <Card
