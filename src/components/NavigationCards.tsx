@@ -65,10 +65,13 @@ const NavigationCards = () => {
       </div>
 
       {/* Hero Navigation Cards */}
-      <div className="flex flex-col gap-6">
-        {cards.map((card, index) => (
-          <HeroCard key={index} {...card} />
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+        <div className="md:col-span-3">
+          <HeroCard {...cards[0]} />
+        </div>
+        <div className="md:col-span-2">
+          <HeroCard {...cards[1]} />
+        </div>
       </div>
     </div>
   );
