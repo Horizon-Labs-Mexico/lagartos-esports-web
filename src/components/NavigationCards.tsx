@@ -1,9 +1,56 @@
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import sponsorBanner from "@/assets/sponsor-banner.png";
-import jerseyImage from "@/assets/jersey-2026.png";
-import playerPhoto from "@/assets/player-photo.png";
+
+interface HeroCardProps {
+  headline: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const HeroCard = ({ headline, subtitle, ctaText, ctaLink }: HeroCardProps) => {
+  return (
+    <div className="relative w-full h-[280px] md:h-[320px] rounded-lg overflow-hidden bg-carbon-800">
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 p-6 md:p-10 z-10 max-w-2xl">
+        <h3 className="font-monument text-2xl md:text-3xl lg:text-4xl text-foreground uppercase tracking-wide mb-3">
+          {headline}
+        </h3>
+        <p className="text-muted-foreground text-sm md:text-base font-normal mb-6">
+          {subtitle}
+        </p>
+        <Link to={ctaLink}>
+          <Button 
+            className="bg-foreground text-background hover:bg-foreground/90 font-semibold px-6 py-2 rounded-md"
+          >
+            {ctaText}
+          </Button>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 const NavigationCards = () => {
+  const cards: HeroCardProps[] = [
+    {
+      headline: "Official Merch 2026",
+      subtitle: "Represent your team with exclusive gear designed for champions.",
+      ctaText: "Shop Now",
+      ctaLink: "/shop"
+    },
+    {
+      headline: "Join the Elite",
+      subtitle: "Discover our competitive roster and become part of the legacy.",
+      ctaText: "Learn More",
+      ctaLink: "/teams"
+    }
+  ];
+
   return (
     <div className="container mx-auto px-6 md:px-8 py-12">
       {/* Sponsor Banner */}
@@ -17,22 +64,11 @@ const NavigationCards = () => {
         </Link>
       </div>
 
-      {/* Jersey and Player Images */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div>
-          <img 
-            src={jerseyImage} 
-            alt="Jersey Official 2026" 
-            className="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
-          />
-        </div>
-        <div>
-          <img 
-            src={playerPhoto} 
-            alt="Jugador Lagartos" 
-            className="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
-          />
-        </div>
+      {/* Hero Navigation Cards */}
+      <div className="flex flex-col gap-6">
+        {cards.map((card, index) => (
+          <HeroCard key={index} {...card} />
+        ))}
       </div>
     </div>
   );
