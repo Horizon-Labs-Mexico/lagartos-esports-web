@@ -7,7 +7,7 @@ const JerseyShowcase = () => {
 
   return (
     <section className="relative w-full overflow-hidden py-8">
-      <div className="container mx-auto px-6 md:px-8">
+      <div className="container mx-auto px-8 md:px-12">
         <div className="relative w-full">
           <img 
             src={jerseyImage} 
@@ -20,7 +20,7 @@ const JerseyShowcase = () => {
           
           {/* Content Container */}
           <div className="absolute inset-0 flex items-end">
-            <div className="w-full px-6 md:px-8 pb-8 md:pb-12">
+            <div className="w-full px-8 md:px-12 pb-8 md:pb-12">
               <div className="max-w-2xl">
                 {/* Title */}
                 <h2 className="font-monument text-3xl md:text-5xl lg:text-6xl text-foreground mb-2 uppercase tracking-wider">
