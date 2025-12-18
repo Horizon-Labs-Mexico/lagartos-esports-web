@@ -15,7 +15,7 @@ const Index = () => {
       
       {/* Main Content with Sidebar */}
       <div className="pt-16">
-        <div className="container mx-auto px-8 md:px-12">
+        <div className="container mx-auto px-6 md:px-8">
           <div className="flex flex-col lg:flex-row gap-8 py-8">
             {/* Main Content */}
             <div className="flex-1">
@@ -37,7 +37,7 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="bg-background border-t border-border">
-          <div className="px-8 md:px-12 py-12">
+          <div className="px-6 md:px-8 py-12">
             {/* Top Section - Logo and Light Mode */}
             <div className="flex items-start justify-between mb-12">
               <div className="text-2xl font-bold text-foreground">7K</div>

@@ -14,7 +14,7 @@ const TeamSection = () => {
 
   return (
     <section className="py-20 bg-carbon-light">
-      <div className="container mx-auto px-8 md:px-12">
+      <div className="container mx-auto px-6 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/30 mb-6">
