@@ -61,12 +61,6 @@ const CommunitySidebar = () => {
       trending: false,
       icon: MessageCircle,
     },
-    {
-      title: t("community.discussion10"),
-      replies: 38,
-      trending: true,
-      icon: TrendingUp,
-    },
   ];
 
   return (
