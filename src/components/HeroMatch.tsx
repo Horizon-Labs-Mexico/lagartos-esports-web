@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/hero-bg.jpg";
-import gotfImage from "@/assets/gotf-mexico-2026.png";
+import phygitalLogo from "@/assets/phygital-games-logo.svg";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
@@ -61,8 +61,8 @@ const HeroMatch = () => {
 
           <div className="mb-8">
             <img 
-              src={gotfImage} 
-              alt="Games of The Future Mexico 2026" 
+              src={phygitalLogo} 
+              alt="Phygital Games" 
               className="w-full max-w-md h-auto"
             />
           </div>
