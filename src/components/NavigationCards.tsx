@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import sponsorBanner from "@/assets/sponsor-banner.png";
+import heroCardMerch from "@/assets/hero-card-merch.jpg";
+import heroCardTeam from "@/assets/hero-card-team.png";
 
 interface HeroCardProps {
   headline: string;
   subtitle: string;
   ctaText: string;
   ctaLink: string;
+  backgroundImage: string;
 }
 
-const HeroCard = ({ headline, subtitle, ctaText, ctaLink }: HeroCardProps) => {
+const HeroCard = ({ headline, subtitle, ctaText, ctaLink, backgroundImage }: HeroCardProps) => {
   return (
     <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden bg-carbon-800">
+      {/* Background image */}
+      <img 
+        src={backgroundImage} 
+        alt="" 
+        className="absolute inset-0 w-full h-full object-cover"
+      />
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       
@@ -41,13 +50,15 @@ const NavigationCards = () => {
       headline: "Official Merch 2026",
       subtitle: "Represent your team with exclusive gear designed for champions.",
       ctaText: "Shop Now",
-      ctaLink: "/shop"
+      ctaLink: "/shop",
+      backgroundImage: heroCardMerch
     },
     {
       headline: "Join the Elite",
       subtitle: "Discover our competitive roster and become part of the legacy.",
       ctaText: "Learn More",
-      ctaLink: "/teams"
+      ctaLink: "/teams",
+      backgroundImage: heroCardTeam
     }
   ];
 
