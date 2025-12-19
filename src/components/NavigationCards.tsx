@@ -11,7 +11,7 @@ interface HeroCardProps {
 
 const HeroCard = ({ headline, subtitle, ctaText, ctaLink }: HeroCardProps) => {
   return (
-    <div className="relative w-full h-[280px] md:h-[320px] rounded-lg overflow-hidden bg-carbon-800">
+    <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden bg-carbon-800">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       
