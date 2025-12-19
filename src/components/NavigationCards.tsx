@@ -62,6 +62,23 @@ const NavigationCards = () => {
     }
   ];
 
+  const secondaryCards: HeroCardProps[] = [
+    {
+      headline: "Card Title 1",
+      subtitle: "Card description goes here.",
+      ctaText: "View More",
+      ctaLink: "/",
+      backgroundImage: ""
+    },
+    {
+      headline: "Card Title 2",
+      subtitle: "Card description goes here.",
+      ctaText: "View More",
+      ctaLink: "/",
+      backgroundImage: ""
+    }
+  ];
+
   return (
     <div className="container mx-auto px-6 md:px-8 py-12">
       {/* Sponsor Banner */}
@@ -82,6 +99,16 @@ const NavigationCards = () => {
         </div>
         <div className="md:col-span-2">
           <HeroCard {...cards[1]} />
+        </div>
+      </div>
+
+      {/* Secondary Hero Cards - Inverted */}
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-[1500px] mx-auto mt-6">
+        <div className="md:col-span-2">
+          <HeroCard {...secondaryCards[0]} />
+        </div>
+        <div className="md:col-span-3">
+          <HeroCard {...secondaryCards[1]} />
         </div>
       </div>
     </div>
