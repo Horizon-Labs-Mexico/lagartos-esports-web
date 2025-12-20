@@ -2,9 +2,14 @@ import Navbar from "@/components/Navbar";
 import HeroMatch from "@/components/HeroMatch";
 import CommunitySidebar from "@/components/CommunitySidebar";
 import NavigationCards from "@/components/NavigationCards";
-import TeamSection from "@/components/TeamSection";
-import JerseyShowcase from "@/components/JerseyShowcase";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+// Sponsor logos
+import sponsorHeineken from "@/assets/sponsor-heineken.png";
+import sponsorXbox from "@/assets/sponsor-xbox.png";
+import sponsorUniversity from "@/assets/sponsor-university.png";
+import sponsorG2a from "@/assets/sponsor-g2a.png";
+import sponsorAfterlife from "@/assets/sponsor-afterlife.png";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -31,9 +36,21 @@ const Index = () => {
 
         <NavigationCards />
 
-        <JerseyShowcase />
-
-        <TeamSection />
+        {/* Sponsors Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-6 md:px-8">
+            <h2 className="font-monument text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-wide text-center mb-12">
+              PATROCINADORES
+            </h2>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 max-w-[1200px] mx-auto">
+              <img src={sponsorHeineken} alt="Heineken" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorXbox} alt="Xbox" className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorUniversity} alt="University Esports México" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorG2a} alt="G2A" className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorAfterlife} alt="Afterlife" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <footer className="bg-background border-t border-border">
