@@ -113,6 +113,36 @@ const NavigationCards = () => {
           <HeroCard {...secondaryCards[1]} />
         </div>
       </div>
+
+      {/* Section Title */}
+      <h2 className="font-monument text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-wide text-center mt-16 mb-8">
+        SOMOS EL NEGRO Y VERDE
+      </h2>
+
+      {/* Triple Hero Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1500px] mx-auto">
+        <HeroCard 
+          headline="Card Title 1"
+          subtitle="Card description goes here."
+          ctaText="View More"
+          ctaLink="/"
+          backgroundImage=""
+        />
+        <HeroCard 
+          headline="Card Title 2"
+          subtitle="Card description goes here."
+          ctaText="View More"
+          ctaLink="/"
+          backgroundImage=""
+        />
+        <HeroCard 
+          headline="Card Title 3"
+          subtitle="Card description goes here."
+          ctaText="View More"
+          ctaLink="/"
+          backgroundImage=""
+        />
+      </div>
     </div>
   );
 };
