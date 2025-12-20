@@ -42,12 +42,12 @@ const Index = () => {
             <h2 className="font-monument text-3xl md:text-4xl lg:text-5xl text-foreground uppercase tracking-wide text-center mb-12">
               PATROCINADORES
             </h2>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16 max-w-[1200px] mx-auto">
-              <img src={sponsorHeineken} alt="Heineken" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorXbox} alt="Xbox" className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorUniversity} alt="University Esports México" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorG2a} alt="G2A" className="h-8 md:h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorAfterlife} alt="Afterlife" className="h-10 md:h-12 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+            <div className="flex items-center justify-between w-full">
+              <img src={sponsorHeineken} alt="Heineken" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorXbox} alt="Xbox" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorUniversity} alt="University Esports México" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorG2a} alt="G2A" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorAfterlife} alt="Afterlife" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </section>
