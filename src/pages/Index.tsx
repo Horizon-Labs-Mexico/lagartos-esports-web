@@ -43,11 +43,11 @@ const Index = () => {
               PATROCINADORES
             </h2>
             <div className="flex items-center justify-between w-full">
-              <img src={sponsorHeineken} alt="Heineken" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorXbox} alt="Xbox" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorUniversity} alt="University Esports México" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorG2a} alt="G2A" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
-              <img src={sponsorAfterlife} alt="Afterlife" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+              <img src={sponsorHeineken} alt="Heineken" className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
+              <img src={sponsorAfterlife} alt="Afterlife" className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
+              <img src={sponsorG2a} alt="G2A" className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
+              <img src={sponsorUniversity} alt="University Esports México" className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
+              <img src={sponsorXbox} alt="Xbox" className="h-16 md:h-20 lg:h-24 w-auto object-contain" />
             </div>
           </div>
         </section>
