@@ -16,7 +16,7 @@ interface HeroCardProps {
 
 const HeroCard = ({ headline, subtitle, ctaText, ctaLink, backgroundImage }: HeroCardProps) => {
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden bg-carbon-800">
+    <div className="relative w-full h-[400px] md:h-[600px] rounded-lg overflow-hidden bg-carbon-800">
       {/* Background image */}
       <img 
         src={backgroundImage} 
