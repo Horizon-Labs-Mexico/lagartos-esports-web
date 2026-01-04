@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import sponsorBanner from "@/assets/sponsor-banner.png";
 import heroCardMerch from "@/assets/hero-card-merch.jpg";
 import heroCardTeam from "@/assets/hero-card-team.png";
-import heroCardGaming from "@/assets/hero-card-gaming.png";
+import heroCardFaceitOW from "@/assets/hero-card-faceit-ow.png";
 import heroCardFutbol from "@/assets/hero-card-futbol.png";
 
 interface HeroCardProps {
@@ -70,7 +70,7 @@ const NavigationCards = () => {
       subtitle: "Card description goes here.",
       ctaText: "View More",
       ctaLink: "/",
-      backgroundImage: heroCardGaming
+      backgroundImage: heroCardFaceitOW
     },
     {
       headline: "Card Title 2",
