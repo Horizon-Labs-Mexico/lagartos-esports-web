@@ -28,9 +28,10 @@ const Navbar = () => {
 
   const companyLinks = [
     { label: t("nav.founders"), href: "#founders" },
-    { label: t("nav.sponsors"), href: "#patrocinadores" },
+    { label: t("nav.sponsors"), href: "/partners" },
     { label: t("nav.gaming"), href: "#gaming-experience" },
   ];
+
 
   const toggleLanguage = () => {
     setLanguage(language === "es" ? "en" : "es");
