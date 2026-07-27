@@ -5,6 +5,7 @@ import NavigationCards from "@/components/NavigationCards";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sponsor logos
+import logo from "@/assets/logo.png";
 import sponsorHeineken from "@/assets/sponsor-heineken.png";
 import sponsorXbox from "@/assets/sponsor-xbox.png";
 import sponsorUniversity from "@/assets/sponsor-university.png";
