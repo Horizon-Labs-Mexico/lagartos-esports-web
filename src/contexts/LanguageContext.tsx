@@ -269,5 +269,11 @@ const translations: Record<Language, Record<string, string>> = {
     "xbox.disclaimer": "This benefit is only available for registered customers with their EsportsID. Check the frequently asked questions.",
     "xbox.ctaText": "ACCUMULATE HOURS AND GET A",
     "xbox.ctaHighlight": "GAME PASS ULTIMATE",
+
+    // Partners page
+    "partners.titlePrefix": "OUR",
+    "partners.titleAccent": "PARTNERS",
+    "partners.subtitle": "Strategic allies powering Lagartos Esports on and off the game.",
+    "partners.visit": "VISIT",
   },
 };
