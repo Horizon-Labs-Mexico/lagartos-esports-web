@@ -58,7 +58,7 @@ const Index = () => {
           <div className="px-6 md:px-8 py-12">
             {/* Top Section - Logo and Light Mode */}
             <div className="flex items-start justify-between mb-12">
-              <img src={sponsorHeineken} alt="Lagartos Esports" className="h-12 w-auto object-contain" />
+              <img src={logo} alt="Lagartos Esports" className="h-12 w-auto object-contain" />
               <button className="flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:bg-muted transition-colors">
                 <span className="text-sm text-foreground">Light Mode</span>
                 <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center">
