@@ -187,11 +187,9 @@ const Partners = () => {
                 rel="noopener noreferrer"
                 className="mt-8"
               >
-                <Button className="group relative w-full overflow-hidden rounded-full h-12 border border-primary bg-gradient-to-r from-carbon via-carbon-light to-carbon text-foreground font-monument tracking-wide uppercase hover:opacity-90 transition-opacity">
-                  <span className="relative z-10 flex items-center justify-center">
-                    {t("partners.visit")} {selected.name.toUpperCase()}
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </span>
+                <Button className="w-full h-12 gap-2">
+                  {t("partners.visit")} {selected.name}
+                  <ExternalLink className="h-4 w-4" />
                 </Button>
               </a>
             </div>
