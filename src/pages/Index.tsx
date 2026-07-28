@@ -60,7 +60,7 @@ const Index = () => {
             <div className="flex items-start justify-between mb-12">
               <img src={logo} alt="Lagartos Esports" className="h-12 w-auto object-contain" />
               <button className="flex items-center gap-2 px-4 py-2 rounded-full border border-border hover:bg-muted transition-colors">
-                <span className="text-sm text-foreground">Modo Claro</span>
+                <span className="text-sm text-foreground">{t("footer.lightMode")}</span>
                 <div className="w-8 h-8 rounded-full border border-border flex items-center justify-center">
                   <div className="w-3 h-3 rounded-full bg-foreground"></div>
                 </div>
@@ -73,33 +73,34 @@ const Index = () => {
               <div className="flex flex-col md:flex-row gap-12 lg:gap-24">
                 {/* About Column */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-4">Nosotros</h4>
+                  <h4 className="font-semibold text-foreground mb-4">{t("footer.about")}</h4>
                   <ul className="space-y-3 text-sm">
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Nuestra Historia</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Carreras</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Guía de Marca</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Network</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Contacto</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Wallpapers</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.story")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.careers")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.brand")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.network")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.contact")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.about.wallpapers")}</a></li>
                   </ul>
                 </div>
 
                 {/* Shop Column */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-4">Tienda</h4>
+                  <h4 className="font-semibold text-foreground mb-4">{t("footer.shop")}</h4>
                   <ul className="space-y-3 text-sm">
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Ayuda</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Descargas</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Envíos</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Devoluciones</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.shop.help")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.shop.downloads")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.shop.shipping")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.shop.returns")}</a></li>
                   </ul>
                 </div>
 
                 {/* Terms Column */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-4">Términos y Políticas</h4>
+                  <h4 className="font-semibold text-foreground mb-4">{t("footer.terms")}</h4>
                   <ul className="space-y-3 text-sm">
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">Todos los Términos y Políticas</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.terms.all")}</a></li>
+                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.terms.sustainability")}</a></li>
                   </ul>
                 </div>
               </div>
@@ -136,7 +137,7 @@ const Index = () => {
             {/* Bottom Section - Copyright */}
             <div className="flex justify-end">
               <p className="text-sm text-foreground">
-                © 2020 - 2025. LAGARTOS Todos los derechos reservados
+                {t("footer.copyright")}
               </p>
             </div>
           </div>
