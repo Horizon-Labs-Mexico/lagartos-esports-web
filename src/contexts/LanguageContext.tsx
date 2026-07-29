@@ -83,8 +83,8 @@ const translations: Record<Language, Record<string, string>> = {
     "auth.passwordMin": "La contraseña debe tener al menos 6 caracteres",
     
     // Hero Match
-    "hero.upcoming": "Próximo Torneo",
-    "hero.tournament": "Games of The Future Mexico 2026",
+    "hero.upcoming": "Torneo en curso",
+    "hero.tournament": "Esports Nations Cup 2026",
     "hero.vs": "VS",
     "hero.days": "días",
     "hero.hours": "horas",
@@ -220,8 +220,8 @@ const translations: Record<Language, Record<string, string>> = {
     "auth.passwordMin": "Password must be at least 6 characters",
     
     // Hero Match
-    "hero.upcoming": "Upcoming Tournament",
-    "hero.tournament": "Games of The Future Mexico 2026",
+    "hero.upcoming": "Tournament in Progress",
+    "hero.tournament": "Esports Nations Cup 2026",
     "hero.vs": "VS",
     "hero.days": "days",
     "hero.hours": "hours",

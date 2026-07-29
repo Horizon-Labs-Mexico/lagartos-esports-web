@@ -6,7 +6,7 @@ import phygitalLogo from "@/assets/ENC_LOGO.png.asset.json";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
-  const targetDate = new Date('2026-01-23T00:00:00');
+  const targetDate = new Date('2026-11-09T00:00:00');
   
   const calculateTimeLeft = () => {
     const now = new Date();
