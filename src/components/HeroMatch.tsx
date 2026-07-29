@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/phygital-hero-bg.png";
-import phygitalLogo from "@/assets/phygital-games-logo.svg";
+import heroImage from "@/assets/enc-hero-bg.png";
+import phygitalLogo from "@/assets/enc-logo.png";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
@@ -62,7 +62,7 @@ const HeroMatch = () => {
           <div className="mb-8">
             <img 
               src={phygitalLogo} 
-              alt="Phygital Games" 
+              alt="Esports Nations Cup" 
               className="w-full max-w-md h-auto"
             />
           </div>
