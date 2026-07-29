@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/enc-hero-bg.png";
-import phygitalLogo from "@/assets/enc-logo.png";
+import phygitalLogo from "@/assets/ENC_LOGO.png.asset.json";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
