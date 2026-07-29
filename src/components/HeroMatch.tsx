@@ -60,9 +60,9 @@ const HeroMatch = () => {
           </h2>
 
           <div className="mb-8">
-            <img 
-              src={phygitalLogo} 
-              alt="Esports Nations Cup" 
+            <img
+              src={phygitalLogo.url}
+              alt="Esports Nations Cup"
               className="w-full max-w-md h-auto"
             />
           </div>
