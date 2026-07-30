@@ -87,12 +87,16 @@ const HeroMatch = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-brand-glow font-semibold">
-              {t("hero.watchLive")}
-            </Button>
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              {t("hero.tournamentInfo")}
-            </Button>
+            <a href="https://www.twitch.tv/enc_en" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-primary text-primary-foreground hover:bg-brand-glow font-semibold">
+                {t("hero.watchLive")}
+              </Button>
+            </a>
+            <a href="https://esportsnationscup.com/en/competitions/2026/eafc" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                {t("hero.tournamentInfo")}
+              </Button>
+            </a>
           </div>
         </div>
       </div>
