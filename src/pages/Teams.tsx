@@ -61,15 +61,6 @@ const Teams = () => {
                     {team.name}
                   </span>
                 </div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-6 flex items-center justify-between">
-                  <span className="text-sm text-muted-foreground">
-                    {language === "es" ? team.taglineEs : team.taglineEn}
-                  </span>
-                  <span className="text-sm font-medium text-primary">
-                    {language === "es" ? "Ver equipo" : "View team"}
-                  </span>
-                </div>
               </Link>
             ))}
           </div>
