@@ -1,24 +1,22 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
-import teamEafc from "@/assets/team-eafc.jpg";
-import teamF1 from "@/assets/team-f1.jpg";
-import teamOverwatch from "@/assets/team-overwatch.jpg";
-import teamChess from "@/assets/team-chess.jpg";
+import teamEafc from "@/assets/team-eafc.png.asset.json";
+import teamF1 from "@/assets/team-f1.png.asset.json";
+import teamOverwatch from "@/assets/team-overwatch.png.asset.json";
+import teamChess from "@/assets/team-chess.png.asset.json";
 
 interface TeamCard {
   id: string;
   name: string;
   image: string;
-  taglineEs: string;
-  taglineEn: string;
 }
 
 const teams: TeamCard[] = [
-  { id: "ea-fc", name: "EA FC", image: teamEafc, taglineEs: "Fútbol competitivo", taglineEn: "Competitive football" },
-  { id: "f1", name: "F1", image: teamF1, taglineEs: "Velocidad y precisión", taglineEn: "Speed and precision" },
-  { id: "overwatch", name: "Overwatch", image: teamOverwatch, taglineEs: "Acción por equipos", taglineEn: "Team-based action" },
-  { id: "chess", name: "Chess", image: teamChess, taglineEs: "Estrategia pura", taglineEn: "Pure strategy" },
+  { id: "ea-fc", name: "EA FC", image: teamEafc.url },
+  { id: "f1", name: "F1", image: teamF1.url },
+  { id: "overwatch", name: "Overwatch", image: teamOverwatch.url },
+  { id: "chess", name: "Chess", image: teamChess.url },
 ];
 
 const Teams = () => {
