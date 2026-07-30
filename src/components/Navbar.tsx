@@ -20,7 +20,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { label: t("nav.teams"), href: "#equipos" },
+    { label: t("nav.teams"), href: "/teams" },
     { label: t("nav.afterlife"), href: "#afterlife" },
     { label: t("nav.competitions"), href: "#competencias" },
     { label: t("nav.store"), href: "#tienda" },
