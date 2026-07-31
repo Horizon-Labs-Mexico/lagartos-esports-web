@@ -67,7 +67,7 @@ const Teams = () => {
                     src={team.logo}
                     alt={`Logo ${team.name}`}
                     loading="lazy"
-                    className={`${team.logoClass} object-contain drop-shadow-[0_0_25px_hsl(var(--primary)/0.45)]`}
+                    className={`${team.logoClass} object-contain`}
                   />
                 </div>
 
