@@ -63,10 +63,14 @@ const Teams = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
 
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-monument text-3xl md:text-5xl text-primary uppercase tracking-wide text-center px-4 drop-shadow-[0_0_25px_hsl(var(--primary)/0.45)]">
-                    {team.name}
-                  </span>
+                  <img
+                    src={team.logo}
+                    alt={`Logo ${team.name}`}
+                    loading="lazy"
+                    className={`${team.logoClass} object-contain drop-shadow-[0_0_25px_hsl(var(--primary)/0.45)]`}
+                  />
                 </div>
+
               </Link>
             ))}
           </div>
