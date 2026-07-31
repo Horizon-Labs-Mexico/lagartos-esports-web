@@ -5,10 +5,10 @@ import teamEafc from "@/assets/team-eafc.png.asset.json";
 import teamF1 from "@/assets/team-f1.png.asset.json";
 import teamOverwatch from "@/assets/team-overwatch.png.asset.json";
 import teamChess from "@/assets/team-chess.png.asset.json";
-import logoEafc from "@/assets/logo-eafc.png.asset.json";
-import logoF1 from "@/assets/logo-f1.png.asset.json";
-import logoOverwatch from "@/assets/logo-overwatch.png.asset.json";
-import logoChess from "@/assets/logo-chess.png.asset.json";
+import logoEafc from "@/assets/logo-eafc-original.png.asset.json";
+import logoF1 from "@/assets/logo-f1-original.png.asset.json";
+import logoOverwatch from "@/assets/logo-overwatch-original.png.asset.json";
+import logoChess from "@/assets/logo-chess-original.png.asset.json";
 
 interface TeamCard {
   id: string;
@@ -67,7 +67,7 @@ const Teams = () => {
                     src={team.logo}
                     alt={`Logo ${team.name}`}
                     loading="lazy"
-                    className={`${team.logoClass} object-contain drop-shadow-[0_0_25px_hsl(var(--primary)/0.45)]`}
+                    className={`${team.logoClass} object-contain`}
                   />
                 </div>
 
