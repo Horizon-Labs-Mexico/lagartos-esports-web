@@ -5,18 +5,24 @@ import teamEafc from "@/assets/team-eafc.png.asset.json";
 import teamF1 from "@/assets/team-f1.png.asset.json";
 import teamOverwatch from "@/assets/team-overwatch.png.asset.json";
 import teamChess from "@/assets/team-chess.png.asset.json";
+import logoEafc from "@/assets/logo-eafc.png.asset.json";
+import logoF1 from "@/assets/logo-f1.png.asset.json";
+import logoOverwatch from "@/assets/logo-overwatch.png.asset.json";
+import logoChess from "@/assets/logo-chess.png.asset.json";
 
 interface TeamCard {
   id: string;
   name: string;
   image: string;
+  logo: string;
+  logoClass: string;
 }
 
 const teams: TeamCard[] = [
-  { id: "ea-fc", name: "EA FC", image: teamEafc.url },
-  { id: "f1", name: "F1", image: teamF1.url },
-  { id: "overwatch", name: "Overwatch", image: teamOverwatch.url },
-  { id: "chess", name: "Chess", image: teamChess.url },
+  { id: "ea-fc", name: "EA FC", image: teamEafc.url, logo: logoEafc.url, logoClass: "w-40 md:w-56" },
+  { id: "f1", name: "F1", image: teamF1.url, logo: logoF1.url, logoClass: "w-56 md:w-80" },
+  { id: "overwatch", name: "Overwatch", image: teamOverwatch.url, logo: logoOverwatch.url, logoClass: "w-40 md:w-56" },
+  { id: "chess", name: "Chess", image: teamChess.url, logo: logoChess.url, logoClass: "w-56 md:w-72" },
 ];
 
 const Teams = () => {
