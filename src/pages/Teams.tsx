@@ -58,7 +58,7 @@ const Teams = () => {
                   loading="lazy"
                   width={1024}
                   height={1280}
-                  className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20" />
 
