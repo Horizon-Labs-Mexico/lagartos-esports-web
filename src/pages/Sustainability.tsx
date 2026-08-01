@@ -21,16 +21,24 @@ const Sustainability = () => {
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-24 md:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-radial" />
+          {/* Background image */}
+          <img
+            src={heroImage.url}
+            alt="Sustainability banner"
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
+          />
+          {/* Dark overlay for extra contrast */}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background" />
           <div className="container mx-auto px-6 md:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block text-primary text-sm md:text-base font-medium tracking-widest uppercase mb-6">
                 {t("sustainability.badge")}
               </span>
-              <h1 className="font-monument text-4xl md:text-6xl lg:text-7xl text-foreground uppercase tracking-wide mb-8">
+              <h1 className="font-monument text-4xl md:text-6xl lg:text-7xl text-foreground uppercase tracking-wide mb-8 drop-shadow-lg">
                 {t("sustainability.title")}
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
                 {t("sustainability.intro")}
               </p>
             </div>
