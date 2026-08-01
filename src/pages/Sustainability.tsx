@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Recycle, Leaf, Beer, Battery, Cpu, Monitor } from "lucide-react";
 import logo from "@/assets/logo.png";
+import heroImage from "@/assets/sustainability-hero.png.asset.json";
 
 const Sustainability = () => {
   const { t } = useLanguage();
