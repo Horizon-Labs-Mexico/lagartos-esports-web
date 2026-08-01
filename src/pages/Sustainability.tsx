@@ -25,10 +25,10 @@ const Sustainability = () => {
           <img
             src={heroImage.url}
             alt="Sustainability banner"
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.65]"
+            className="absolute inset-0 w-full h-full object-cover brightness-[0.85]"
           />
-          {/* Subtle overlay so the white text pops without hiding the image */}
-          <div className="absolute inset-0 bg-black/25" />
+          {/* Overlay to make the white text stand out without hiding the leaves */}
+          <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
           <div className="container mx-auto px-6 md:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
