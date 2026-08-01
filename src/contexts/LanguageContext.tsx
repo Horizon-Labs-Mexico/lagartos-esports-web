@@ -171,8 +171,27 @@ const translations: Record<Language, Record<string, string>> = {
     "partners.titlePrefix": "NUESTROS",
     "partners.titleAccent": "PATROCINADORES",
     "partners.subtitle": "Aliados estratégicos que impulsan a Lagartos Esports dentro y fuera del juego.",
-    "partners.visit": "VISITAR",
+    "partners.visit": "Visitar",
+
+    // Sustainability page
+    "sustainability.badge": "Compromiso Verde",
+    "sustainability.title": "Sustentabilidad",
+    "sustainability.intro": "Lagartos integra prácticas de gestión responsable de residuos dentro de sus propias operaciones, demostrando que el rendimiento competitivo puede ir de la mano con el cuidado del planeta.",
+    "sustainability.afterlifeTitle": "Afterlife",
+    "sustainability.afterlifeText": "Una de nuestras principales ramas de negocio es nuestra sede, el Afterlife; un espacio de entretenimiento y gaming donde se implementa la separación y reciclaje de materiales generados durante su funcionamiento.",
+    "sustainability.recyclingTitle": "Reciclaje",
+    "sustainability.recyclingText": "Entre los residuos que se reciclan se encuentran botellas de plástico, latas de aluminio, pilas y componentes electrónicos de computadoras. Muchos de estos materiales provienen directamente del consumo y uso de equipo dentro del mismo establecimiento, lo que permite gestionar de manera responsable los desechos que genera el propio negocio.",
+    "sustainability.circularTitle": "Economía Circular",
+    "sustainability.circularText": "Estas acciones se alinean con principios de sustentabilidad y economía circular, que buscan reducir la generación de basura y promueven la reutilización o reciclaje de materiales.",
+    "sustainability.recycledMaterials": "Materiales Reciclados",
+    "sustainability.plasticBottles": "Botellas de plástico",
+    "sustainability.aluminumCans": "Latas de aluminio",
+    "sustainability.batteries": "Pilas y baterías",
+    "sustainability.electronics": "Componentes electrónicos",
+    "sustainability.commitment": "Comprometidos con reducir, reutilizar y reciclar.",
+    "sustainability.statement": "Comprometidos con un futuro más limpio para el gaming.",
   },
+
 
   en: {
     // Navbar
