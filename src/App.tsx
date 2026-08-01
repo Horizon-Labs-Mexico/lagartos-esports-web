@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import XboxGamePass from "./pages/XboxGamePass";
 import Partners from "./pages/Partners";
 import Teams from "./pages/Teams";
+import Sustainability from "./pages/Sustainability";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/xbox-game-pass" element={<XboxGamePass />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/teams" element={<Teams />} />
+              <Route path="/sustainability" element={<Sustainability />} />
               <Route path="/auth" element={<Auth />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
@@ -40,3 +42,4 @@ const App = () => (
 );
 
 export default App;
+
