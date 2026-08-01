@@ -35,10 +35,10 @@ const Sustainability = () => {
               <span className="inline-block text-primary text-sm md:text-base font-medium tracking-widest uppercase mb-6">
                 {t("sustainability.badge")}
               </span>
-              <h1 className="font-monument text-4xl md:text-6xl lg:text-7xl text-foreground uppercase tracking-wide mb-8 drop-shadow-lg">
+              <h1 className="font-monument text-4xl md:text-6xl lg:text-7xl text-foreground uppercase tracking-wide mb-8 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
                 {t("sustainability.title")}
               </h1>
-              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed max-w-3xl mx-auto drop-shadow-md">
+              <p className="text-lg md:text-xl text-foreground/95 leading-relaxed max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                 {t("sustainability.intro")}
               </p>
             </div>
