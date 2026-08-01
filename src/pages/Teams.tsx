@@ -34,17 +34,6 @@ const Teams = () => {
 
       <main className="pt-24 pb-20 px-6 md:px-8">
         <div className="container mx-auto">
-          <header className="text-center mb-12">
-            <h1 className="font-monument text-3xl md:text-5xl text-foreground uppercase tracking-wide">
-              {t("nav.teams")}
-            </h1>
-            <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-              {language === "es"
-                ? "Conoce las divisiones que representan a Lagartos Esports en cada título."
-                : "Meet the divisions representing Lagartos Esports across every title."}
-            </p>
-          </header>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[1400px] mx-auto">
             {teams.map((team) => (
               <Link
