@@ -25,11 +25,11 @@ const Sustainability = () => {
           <img
             src={heroImage.url}
             alt="Sustainability banner"
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.55]"
+            className="absolute inset-0 w-full h-full object-cover brightness-75"
           />
-          {/* Dark overlay for extra contrast */}
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
+          {/* Vignette overlay to darken the center where text sits */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.65)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
           <div className="container mx-auto px-6 md:px-8 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <span className="inline-block text-primary text-sm md:text-base font-medium tracking-widest uppercase mb-6">
