@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import { useLanguage } from "@/contexts/LanguageContext";
 import teamEafc from "@/assets/team-eafc.png.asset.json";
 import teamF1 from "@/assets/team-f1.png.asset.json";
 import teamOverwatch from "@/assets/team-overwatch.png.asset.json";
@@ -26,8 +25,6 @@ const teams: TeamCard[] = [
 ];
 
 const Teams = () => {
-  const { language, t } = useLanguage();
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
