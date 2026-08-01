@@ -100,7 +100,7 @@ const Index = () => {
                   <h4 className="font-semibold text-foreground mb-4">{t("footer.terms")}</h4>
                   <ul className="space-y-3 text-sm">
                     <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.terms.all")}</a></li>
-                    <li><a href="#" className="text-foreground hover:text-primary transition-colors">{t("footer.terms.sustainability")}</a></li>
+                    <li><a href="/sustainability" className="text-foreground hover:text-primary transition-colors">{t("footer.terms.sustainability")}</a></li>
                   </ul>
                 </div>
               </div>
