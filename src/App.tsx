@@ -11,6 +11,7 @@ import Partners from "./pages/Partners";
 import Teams from "./pages/Teams";
 import Sustainability from "./pages/Sustainability";
 import Auth from "./pages/Auth";
+import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
               <Route path="/teams" element={<Teams />} />
               <Route path="/sustainability" element={<Sustainability />} />
               <Route path="/auth" element={<Auth />} />
+              <Route path="/profile" element={<Profile />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
