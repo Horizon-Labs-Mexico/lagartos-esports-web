@@ -81,6 +81,9 @@ const translations: Record<Language, Record<string, string>> = {
     "auth.userExists": "Este usuario ya está registrado",
     "auth.invalidEmail": "Por favor ingresa un email válido",
     "auth.passwordMin": "La contraseña debe tener al menos 6 caracteres",
+    "auth.or": "o",
+    "auth.continueWithGoogle": "Continuar con Google",
+    "auth.googleError": "No se pudo iniciar sesión con Google",
     
     // Hero Match
     "hero.upcoming": "Torneo en curso",
@@ -237,6 +240,9 @@ const translations: Record<Language, Record<string, string>> = {
     "auth.userExists": "This user is already registered",
     "auth.invalidEmail": "Please enter a valid email",
     "auth.passwordMin": "Password must be at least 6 characters",
+    "auth.or": "or",
+    "auth.continueWithGoogle": "Continue with Google",
+    "auth.googleError": "Could not sign in with Google",
     
     // Hero Match
     "hero.upcoming": "Tournament in Progress",
