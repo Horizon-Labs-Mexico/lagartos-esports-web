@@ -116,6 +116,10 @@ const Navbar = () => {
                     <DropdownMenuItem className="text-muted-foreground">
                       {user.email}
                     </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => navigate("/profile")} className="cursor-pointer">
+                      <User className="h-4 w-4 mr-2" />
+                      {t("nav.profile")}
+                    </DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={handleLogout} className="text-destructive cursor-pointer">
                       <LogOut className="h-4 w-4 mr-2" />
@@ -181,6 +185,10 @@ const Navbar = () => {
                 {user ? (
                   <>
                     <div className="text-sm text-muted-foreground px-2">{user.email}</div>
+                    <Button variant="ghost" className="w-full justify-start" onClick={() => { setIsMenuOpen(false); navigate("/profile"); }}>
+                      <User className="h-4 w-4 mr-2" />
+                      {t("nav.profile")}
+                    </Button>
                     <Button 
                       variant="ghost" 
                       className="w-full justify-start text-destructive"
