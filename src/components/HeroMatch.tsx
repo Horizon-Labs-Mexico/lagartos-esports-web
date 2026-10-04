@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useSiteContent } from "@/hooks/useSiteContent";
 import heroImage from "@/assets/enc-hero-bg.png";
 import phygitalLogo from "@/assets/ENC_LOGO.png.asset.json";
 
 const HeroMatch = () => {
   const { t } = useLanguage();
-  const targetDate = new Date('2026-11-09T00:00:00');
+  const { get } = useSiteContent();
+  const targetDate = new Date(get("hero", "date", "2026-11-09T00:00:00"));
   
   const calculateTimeLeft = () => {
     const now = new Date();
@@ -40,7 +42,7 @@ const HeroMatch = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url(${heroImage})`,
+          backgroundImage: `url(${get("hero", "bg", heroImage)})`,
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
@@ -52,16 +54,16 @@ const HeroMatch = () => {
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 backdrop-blur-sm border border-primary/30 mb-6">
             <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm font-medium text-foreground">{t("hero.upcoming")}</span>
+            <span className="text-sm font-medium text-foreground">{get("hero", "badge", t("hero.upcoming"))}</span>
           </div>
 
           <h2 className="text-sm font-medium text-muted-foreground mb-2">
-            {t("hero.tournament")}
+            {get("hero", "title", t("hero.tournament"))}
           </h2>
 
           <div className="mb-8">
             <img
-              src={phygitalLogo.url}
+              src={get("hero", "logo", phygitalLogo.url)}
               alt="Esports Nations Cup"
               className="w-full max-w-md h-auto"
             />
@@ -87,12 +89,12 @@ const HeroMatch = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a href="https://www.twitch.tv/enc_en" target="_blank" rel="noopener noreferrer">
+            <a href={get("hero", "stream", "https://www.twitch.tv/enc_en")} target="_blank" rel="noopener noreferrer">
               <Button className="bg-primary text-primary-foreground hover:bg-brand-glow font-semibold">
                 {t("hero.watchLive")}
               </Button>
             </a>
-            <a href="https://esportsnationscup.com/en/competitions/2026/eafc" target="_blank" rel="noopener noreferrer">
+            <a href={get("hero", "info", "https://esportsnationscup.com/en/competitions/2026/eafc")} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 {t("hero.tournamentInfo")}
               </Button>
